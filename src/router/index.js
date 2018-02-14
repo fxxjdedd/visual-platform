@@ -1,41 +1,37 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import BackendLayout from '@/views/layouts/backend'
-import LoglistLayout from '@/views/layouts/loglist'
-import LoglistMain from '@/views/loglistMain'
-import LoglistDetail from '@/views/loglistMain/_imei'
-import WhiteList from '@/views/backendMain/whitelist'
-import AppList from '@/views/backendMain/applist'
-import Permission from '@/views/backendMain/permission'
-Vue.use(Router)
+// import BussinessLayout from '@/views/layouts/bussiness'
+import EmployLayout from '@/views/layouts/employ'
+import JobLayout from '@/views/layouts/job'
+import Campbase from '@/views/job/campbase'
+import Jobwanted from '@/views/job/jobwanted'
+import Talent from '@/views/employ/talent'
+import Jobfair from '@/views/employ/jobfair'
 
-export const asyncRoutes = [
-  {
-    path: '/backend',
-    name: 'backend',
-    component: BackendLayout,
-    redirect: '/backend/whitelist',
-    children: [
-        { path: 'whitelist', label: '白名单设置', component: WhiteList },
-        { path: 'applist', label: '业务设置', component: AppList, meta: {roles: ['admin']} },
-        { path: 'permission', label: '权限设置', component: Permission, meta: {roles: ['admin']} }
-    ]
-  }
-]
+Vue.use(Router)
 export default new Router({
   scrollBehavior: () => ({ y: 0 }),
   routes: [
     {
       path: '/',
-      redirect: '/loglist'
+      redirect: '/job'
     },
     {
-      path: '/loglist',
-      component: LoglistLayout,
-      redirect: '/loglist/logmain/default',
+      path: '/job',
+      component: JobLayout,
+      redirect: '/job/campbase',
       children: [
-        { path: 'logmain/:appId', component: LoglistMain, props: true },
-        { path: 'logdetail/:userImei', component: LoglistDetail, props: true }
+        { path: 'campbase', component: Campbase },
+        { path: 'jobwanted', component: Jobwanted }
+      ]
+    },
+    {
+      path: '/employ',
+      component: EmployLayout,
+      redirect: '/employ/talent',
+      children: [
+        { path: 'talent', component: Talent },
+        { path: 'jobfair', component: Jobfair }
       ]
     }
   ]
