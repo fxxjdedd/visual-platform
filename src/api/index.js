@@ -1,3 +1,11 @@
-export { default as userApi } from './user'
-export {default as loglistApi} from './loglist'
-export {default as backendApi} from './backend'
+import { request } from '@/utils'
+
+function getCampBaseData () {
+  return request({
+    url: `${process.env.BASE_API}/static/data/campbase.json`,
+    method: 'get'
+  })
+}
+export default {
+  getCampBaseData
+}

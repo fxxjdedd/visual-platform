@@ -5,6 +5,6 @@ const prodEnv = require('./prod.env')
 //开发环境所用配置
 module.exports = merge(prodEnv, {
   NODE_ENV: '"development"',
-  BASE_API: '"http://localhost:8828/thoth-admin"',
+  BASE_API: '"http://localhost:8080"',
   DEV: true
 })

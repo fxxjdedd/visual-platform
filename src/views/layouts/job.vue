@@ -1,7 +1,7 @@
 <template>
   <div class="Job">
      <job-sidebar></job-sidebar> 
-     <div class="Job_Main">
+     <div class="Job__Main">
         <router-view></router-view> 
      </div>
   </div>

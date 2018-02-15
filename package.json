@@ -1,5 +1,5 @@
 {
-  "name": "Thoth",
+  "name": "USESED",
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "futengda <futengda@xiaomi.com>",
@@ -16,10 +16,14 @@
   "dependencies": {
     "axios": "^0.16.2",
     "base-64": "^0.1.0",
+    "d3": "^4.13.0",
+    "echarts": "^4.0.2",
     "element-ui": "2.0.11",
     "js-cookie": "2.2.0",
     "lodash": "4.17.4",
+    "tween": "^0.9.0",
     "utf8": "^3.0.0",
+    "v-charts": "^1.16.2",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
     "vuex": "3.0.1"
