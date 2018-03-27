@@ -47,6 +47,31 @@
         </div>
       </div>
     </div>
+    <div class="Campbase__Table">
+      <el-table
+        :data="campbaseData">
+        <el-table-column
+          label="地址"
+          prop="JXJDJTDZ">
+        </el-table-column>
+        <el-table-column
+          label="发起人"
+          prop="JXJDLXR">
+        </el-table-column>
+        <el-table-column
+          label="公司"
+          prop="JXJDMC">
+        </el-table-column>
+        <el-table-column
+          label="注册单位"
+          prop="PZDW">
+        </el-table-column>
+        <el-table-column
+          label="发布时间"
+          prop="PZND">
+        </el-table-column>
+      </el-table>
+    </div>
   </div>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
   <div class="Bussiness">
      <bussiness-sidebar></bussiness-sidebar> 
-     <div class="Bussiness_Main">
+     <div class="Bussiness__Main">
         <router-view></router-view> 
      </div>
   </div>

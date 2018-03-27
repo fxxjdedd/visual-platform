@@ -1,7 +1,7 @@
 <template>
   <div class="Employ">
      <employ-sidebar></employ-sidebar> 
-     <div class="Employ_Main">
+     <div class="Employ__Main">
         <router-view></router-view> 
      </div>
   </div>
